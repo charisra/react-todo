@@ -28,7 +28,7 @@ module.exports = {
     });
 
     // Filter by searchText
-
+  
     // Sort todos with non-completed first
 
     return filteredTodos
