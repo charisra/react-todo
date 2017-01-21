@@ -33,5 +33,20 @@ describe('AddToDo',() => {
 
     expect(spy).toNotHaveBeenCalled(todoText);
   });
+describe('filterTodos', () => {
+  var todos = [{
+    id: 1,
+    text: 'Some text here',
+    completed: true
+  },{
+  id: 2,
+  text: 'Some text here',
+  completed: true
+},{
+  id: 3,
+text: 'Some text here',
+completed: true
+  }];
 
+});
 });
