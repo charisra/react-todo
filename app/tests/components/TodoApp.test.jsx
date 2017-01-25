@@ -39,23 +39,8 @@ describe('TodoApp', () => {
     expect(todoApp.state.todos[0].completedAt).toBeA('number');
   });
 
-  it('should toggle completed value when handleToggle called', () => {
-    var todoData = {
-      id: 11,
-      text: 'Test features',
-      completed: false,
-      createdAt: 0,
-      completedAt: undefined
-    };
-    var todoApp = TestUtils.renderIntoDocument(<TodoApp/>);
-    todoApp.setState({todos: [todoData]});
-
-    expect(todoApp.state.todos[0].completed).toBe(false);
-    todoApp.handleToggle(11);
-    expect(todoApp.state.todos[0].completed).toBe(true);
-
-  });
-  it('shold toggle todo from completed to incomplete', () => {
+  // Test that when toggle from true to false, completedAt get removed
+  it('should toggle todo from completed to incompoleted', () => {
     var todoData = {
       id: 11,
       text: 'Test features',
@@ -70,5 +55,5 @@ describe('TodoApp', () => {
     todoApp.handleToggle(11);
     expect(todoApp.state.todos[0].completed).toBe(false);
     expect(todoApp.state.todos[0].completedAt).toNotExist();
-});
+  });
 });

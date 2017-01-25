@@ -21,6 +21,7 @@ describe('TodoSearch', () => {
 
     expect(spy).toHaveBeenCalledWith(false, 'Dog');
   });
+
   it('should call onSearch with proper checked value', () => {
     var spy = expect.createSpy();
     var todoSearch = TestUtils.renderIntoDocument(<TodoSearch onSearch={spy}/>);
@@ -29,6 +30,5 @@ describe('TodoSearch', () => {
     TestUtils.Simulate.change(todoSearch.refs.showCompleted);
 
     expect(spy).toHaveBeenCalledWith(true, '');
-
   });
 });
